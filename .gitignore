@@ -3,3 +3,7 @@ build
 .idea
 *.iml
 ci/variables.yml
+gradle/
+gradlew
+gradlew.bat
+out/
