@@ -14,7 +14,7 @@ buildscript {
 
 
 plugins {
-    id "java" version("11.")
+    id "java"
 }
 
 apply plugin: 'org.springframework.boot'
@@ -25,4 +25,13 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+    testCompile("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
 }
+
+bootRun.environment([
+    "WELCOME_MESSAGE": "helloFromGradle",
+])
+
+test.environment([
+    "WELCOME_MESSAGE": "Hello from test",
+])
